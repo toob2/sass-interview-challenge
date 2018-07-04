@@ -1,0 +1,359 @@
+@import "reset-css";
+@import "susy";
+@import "_media-queries";
+@import "../variables";
+$columns: 12;
+$maxWidth: 1020px;
+$susy: ( math: fluid, gutter-position: inside, container: 100%, columns: $columns, gutters: .2, gutter-override: 8%, column-width: false, global-box-sizing: border-box);
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+/* https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+
+html {
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit !important;
+}
+
+.container {
+	@include container();
+	width: 100%;
+	position: relative;
+	max-width: $maxWidth; // Padding according to needs:
+	padding-left: 10px;
+	padding-right: 10px; // Columns
+	%col {
+		@include span($columns);
+		position: relative;
+		@include gutters(4.14%);
+		@include media(tabletSmall) {
+			@include gutters(2.25%);
+		}
+		@include media(tabletLarge) {
+			@include gutters(2.25%);
+		}
+	} // Mobile (smallest, until other media query overrides):
+	@for $i from 1 through $columns {
+		.col-#{$i} {
+			@extend %col;
+			width: span($i of $columns 4%);
+		}
+		.push-#{$i} {
+			position: relative;
+			left: span($i of $columns);
+		}
+		.pull-#{$i} {
+			position: relative;
+			left: - span($i of $columns);
+		}
+	} // Mobile small (ms):
+	@for $i from 1 through $columns {
+		.col-ms-#{$i} {
+			@extend %col;
+			@include media (mobile-sm) {
+				width: span($i of $columns);
+			}
+		}
+		@include media (mobile-sm) {
+			.push-sm-#{$i} {
+				position: relative;
+				left: span($i of $columns);
+			}
+			.pull-sm-#{$i} {
+				position: relative;
+				left: - span($i of $columns);
+			}
+		}
+	} // Mobile medium (mm):
+	@for $i from 1 through $columns {
+		.col-mm-#{$i} {
+			@extend %col;
+			@include media (mobile-med) {
+				width: span($i of $columns);
+			}
+		}
+		@include media (mobile-med) {
+			.push-mm-#{$i} {
+				position: relative;
+				left: span($i of $columns);
+			}
+			.pull-mm-#{$i} {
+				position: relative;
+				left: - span($i of $columns);
+			}
+		}
+	} // Mobile large (ml):
+	@for $i from 1 through $columns {
+		.col-ml-#{$i} {
+			@extend %col;
+			@include media (mobile-lrg) {
+				width: span($i of $columns);
+			}
+		}
+		@include media (mobile-lrg) {
+			.push-ml-#{$i} {
+				position: relative;
+				left: span($i of $columns);
+			}
+			.pull-ml-#{$i} {
+				position: relative;
+				left: - span($i of $columns);
+			}
+		}
+	} // Table small (ts):
+	@for $i from 1 through $columns {
+		.col-ts-#{$i} {
+			@extend %col;
+			@include media (tablet-sm) {
+				width: span($i of $columns);
+			}
+		}
+		@include media (tablet-sm) {
+			.push-ts-#{$i} {
+				position: relative;
+				left: span($i of $columns);
+			}
+			.pull-ts-#{$i} {
+				position: relative;
+				left: - span($i of $columns);
+			}
+		}
+	} // Tablet large (tl):
+	@for $i from 1 through $columns {
+		.col-tl-#{$i} {
+			@extend %col;
+			@include media (tablet-lrg) {
+				width: span($i of $columns);
+			}
+		}
+		@include media (tablet-lrg) {
+			.push-tl-#{$i} {
+				position: relative;
+				left: span($i of $columns);
+			}
+			.pull-tl-#{$i} {
+				position: relative;
+				left: - span($i of $columns);
+			}
+		}
+	} // Desktop small (ds):
+	@for $i from 1 through $columns {
+		.col-ds-#{$i} {
+			@extend %col;
+			@include media (desktop-sm) {
+				width: span($i of $columns);
+			}
+		}
+		@include media (desktop-sm) {
+			.push-ds-#{$i} {
+				position: relative;
+				left: span($i of $columns);
+			}
+			.pull-ds-#{$i} {
+				position: relative;
+				left: - span($i of $columns);
+			}
+		}
+	} // Desktop large (dl):
+	@for $i from 1 through $columns {
+		.col-dl-#{$i} {
+			@extend %col;
+			@include media (desktop-lrg) {
+				width: span($i of $columns);
+			}
+		}
+		@include media (desktop-lrg) {
+			.push-dl-#{$i} {
+				position: relative;
+				left: span($i of $columns);
+			}
+			.pull-dl-#{$i} {
+				position: relative;
+				left: - span($i of $columns);
+			}
+		}
+	} // Remove margins on left or right as necessary by applying these classes:
+	.alpha {
+		margin-left: 0;
+		padding-left: 0 !important;
+	}
+	.omega {
+		margin-right: 0;
+		padding-right: 0 !important;
+	}
+	.hide {
+		display: none !important;
+	}
+	.show {
+		display: block !important;
+	}
+	.show-inline {
+		display: inline !important;
+	}
+	.show-block {
+		display: block !important;
+	}
+	.show-inline-block {
+		display: inline-block !important;
+	} // Margin / padding control mobile-med:
+	@include media(mobile-sm) {
+		.alpha-ms {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		.omega-ms {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		.show-ms {
+			display: block !important;
+		}
+		.show-ms-inline {
+			display: inline !important;
+		}
+		.show-ms-inline-block {
+			display: inline-block !important;
+		}
+		.hide-ms {
+			display: none !important;
+		}
+	} // Margin / padding control mobile medium:
+	@include media(mobile-med) {
+		.alpha-mm {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		.omega-mm {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		.show-mm {
+			display: block !important;
+		}
+		.show-mm-inline {
+			display: inline !important;
+		}
+		.show-mm-inline-block {
+			display: inline-block !important;
+		}
+		.hide-mm {
+			display: none !important;
+		}
+	} // Margin / padding control mobile large:
+	@include media(mobile-lrg) {
+		.alpha-ml {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		.omega-ml {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		.show-ml {
+			display: block !important;
+		}
+		.show-ml-inline {
+			display: inline !important;
+		}
+		.show-ml-inline-block {
+			display: inline-block !important;
+		}
+		.hide-ml {
+			display: none !important;
+		}
+	} // Margin / padding control tablet small:
+	@include media(tablet-sm) {
+		.alpha-ts {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		.omega-ts {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		.show-ts {
+			display: block !important;
+		}
+		.show-ts-inline {
+			display: inline !important;
+		}
+		.show-ts-inline-block {
+			display: inline-block !important;
+		}
+		.hide-ts {
+			display: none !important;
+		}
+	} // Margin / padding control tablet large:
+	@include media(tablet-lrg) {
+		.alpha-tl {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		.omega-tl {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		.show-tl {
+			display: block !important;
+		}
+		.show-tl-inline {
+			display: inline !important;
+		}
+		.show-tl-inline-block {
+			display: inline-block !important;
+		}
+		.hide-tl {
+			display: none !important;
+		}
+	} // Margin / padding control desktop small:
+	@include media(desktop-sm) {
+		.alpha-ds {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		.omega-ds {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		.show-ds {
+			display: block !important;
+		}
+		.show-ds-inline {
+			display: inline !important;
+		}
+		.show-ds-inline-block {
+			display: inline-block !important;
+		}
+		.hide-ds {
+			display: none !important;
+		}
+	} // Margin / padding control desktop large:
+	@include media(desktop-lrg) {
+		.alpha-dl {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		.omega-dl {
+			margin-right: 0;
+			padding-right: 0;
+		}
+		.show-dl {
+			display: block !important;
+		}
+		.show-dl-inline {
+			display: inline !important;
+		}
+		.show-dl-inline-block {
+			display: inline-block !important;
+		}
+		.hide-dl {
+			display: none !important;
+		}
+	}
+}

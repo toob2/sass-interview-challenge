@@ -1,0 +1,111 @@
+/*
+	mobile-sm
+	mobile-sm-max
+	mobile-med
+	mobile-med-max
+	mobile-lrg
+	mobile-lrg-max
+	tablet-sm
+	tablet-sm-max
+	tablet-lrg
+	tablet-lrg-max
+	desktop-sm
+	desktop-sm-max
+	desktop-lrg
+	desktop-lrg-max
+*/
+
+$widthMobileSmall: 320px;
+$widthMobileMedium: 375px;
+$widthMobileLarge: 425px;
+$widthTabletSmall: 768px;
+$widthTabletLarge: 1024px;
+$widthDesktopSmall: 1280px;
+$widthDesktopLarge: 1440px;
+@mixin media ($condition) {
+	@if $condition==mobile-sm {
+		@media only screen and (min-width: #{$widthMobileSmall}) {
+			@content;
+		}
+	}
+	@else if $condition==mobile-sm-max {
+		@media only screen and (max-width: #{$widthMobileSmall}) {
+			@content;
+		}
+	}
+	@else if $condition==mobile-med {
+		@media only screen and (min-width: #{$widthMobileMedium}) {
+			@content;
+		}
+	}
+	@else if $condition==mobile-med-max {
+		@media only screen and (max-width: #{$widthMobileMedium}) {
+			@content;
+		}
+	}
+	@else if $condition==mobile-lrg {
+		@media only screen and (min-width: #{$widthMobileLarge}) {
+			@content;
+		}
+	}
+	@else if $condition==mobile-lrg-max {
+		@media only screen and (max-width: #{$widthMobileLarge}) {
+			@content;
+		}
+	}
+	@else if $condition==tablet-sm {
+		@media only screen and (min-width: #{$widthTabletSmall}) {
+			@content;
+		}
+	}
+	@else if $condition==tablet-sm-max {
+		@media only screen and (max-width: #{$widthTabletSmall}) {
+			@content;
+		}
+	}
+	@else if $condition==tablet-lrg {
+		@media only screen and (min-width: #{$widthTabletLarge}) {
+			@content;
+		}
+	}
+	@else if $condition==tablet-lrg-max {
+		@media only screen and (max-width: #{$widthTabletLarge}) {
+			@content;
+		}
+	}
+	@else if $condition==desktop-sm {
+		@media only screen and (min-width: #{$widthDesktopSmall}) {
+			@content;
+		}
+	}
+	@else if $condition==desktop-sm-max {
+		@media only screen and (max-width: #{$widthDesktopSmall}) {
+			@content;
+		}
+	}
+	@else if $condition==desktop-lrg {
+		@media only screen and (min-width: #{$widthDesktopLarge}) {
+			@content;
+		}
+	}
+	@else if $condition==desktop-lrg-max {
+		@media only screen and (max-width: #{$widthDesktopLarge}) {
+			@content;
+		}
+	}
+	@else if $condition==retina {
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+			@content;
+		}
+	}
+	@else if $condition==print {
+		@media print {
+			@content;
+		}
+	} // Use the value directly
+	@else {
+		@media only screen and (min-width: #{$condition}) {
+			@content
+		}
+	}
+}

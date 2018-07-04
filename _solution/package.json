@@ -1,0 +1,22 @@
+{
+  "name": "regus-hypothermic-particulars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "dev": "node ./node_modules/gulp/bin/gulp.js dev",
+    "buildCss": "node ./node_modules/gulp/bin/gulp.js buildCss"
+  },
+  "author": "Tobias Nilsson",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-batch": "1.0.5",
+    "gulp-connect": "5.5.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "5.0.0",
+    "susy": "^2.2.14"
+  },
+  "dependencies": {}
+}

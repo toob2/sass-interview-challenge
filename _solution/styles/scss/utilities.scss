@@ -1,0 +1,46 @@
+.hr {
+   display: block;
+   border: none;
+   height: 0.08rem;
+   margin: 0 auto;
+   background-color: $colBaseText;
+      &--thick {
+         height: 0.25rem;
+         align-self: center;
+      }
+      &--short {
+         width: 50%;
+         margin: 0 25%;
+         height: 0.05rem;
+         background-color: $accentColor;
+      }
+      &--blue {
+         width: 30%;
+         margin: 0 35%;
+         height: 0.5rem;
+         background-color: $accentColor;
+      }
+
+
+
+}
+
+.u-margin-bottom-big {
+   margin-bottom: 4rem;
+ }
+ 
+ .u-margin-bottom-medium {
+   margin-bottom: 2rem;
+ }
+ 
+ .u-margin-bottom-small {
+   margin-bottom: 0.75rem;
+ }
+ 
+ .u-margin-bottom-xs {
+   margin-bottom: 0.15rem;
+ }
+
+ .no-border {
+   border: none;
+ }

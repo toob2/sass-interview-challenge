@@ -1,0 +1,37 @@
+
+$colBaseText: #231f20;
+$colTextDarker: #010101;
+$colTextGrey1: #939696;
+$colTextGrey2: #666b6e;
+$colTextGrey3: #a9a8a8;
+$accentColor: #396fb0;
+$warnColor: #990000;
+$colPh: #ffff91;
+
+@mixin sans {
+	font-family: "Roboto", sans, "sans-serif";
+}
+
+@mixin serif {
+	font-family: Georgia, Garamond, Times, serif;
+}
+
+@mixin placeholderColor ($col) {
+	&::-webkit-input-placeholder {
+		/* Chrome/Opera/Safari */
+		color: #{$col};
+	}
+	&::-moz-placeholder {
+		/* Firefox 19+ */
+		opacity: 1;
+		color: #{$col};
+	}
+	&:-ms-input-placeholder {
+		/* IE 10+ */
+		color: #{$col};
+	}
+	&:-moz-placeholder {
+		/* Firefox 18- */
+		color: #{$col};
+	}
+}

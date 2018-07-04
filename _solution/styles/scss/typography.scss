@@ -1,0 +1,85 @@
+@import "variables";
+
+html {
+	font-size: 18px;
+	@include sans;
+	color: $colBaseText;
+	line-height: 120%;
+}
+
+input {
+	@include sans();
+	@include placeholderColor($colTextGrey3)
+}
+
+select {
+	@include sans();
+	@include placeholderColor($colTextGrey3);
+	&:invalid {
+		color: $colTextGrey3;
+	}	
+
+	&.empty { color: $colTextGrey3; }
+}
+
+textarea {
+	@include sans();
+	@include placeholderColor($colTextGrey3)
+}
+
+.heading-primary {
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 300;
+   font-size: 1.7rem;
+}
+
+.heading-secondary {
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 300;
+   font-size: 1.3rem;
+   line-height: 1.6rem;   
+}
+
+.caption {
+   text-align: center;
+   font-size: 0.65rem;
+   line-height: 0.8rem;
+   font-weight: bold;
+}
+
+.form__text {
+   font-size: 1rem;
+   line-height: 1.3rem;
+   font-weight: bold;
+   padding: 0!important;
+      &--intro {
+         text-align: center;
+         padding: 0 5%;
+      }
+}
+
+.right-side {
+   font-size: 1rem;
+   line-height: 1.3rem;
+   font-weight: bold;
+   padding: 0.25rem;
+   border: 0.05rem solid $colBaseText;
+      &:focus {
+         background-color: $colPh;
+      }
+}
+
+.text-smaller {
+   font-size: 0.65rem;
+   line-height: 0.9rem;
+   font-weight: bold;
+      &--red {
+         color: $warnColor;
+      }
+}
+
+
+
+
