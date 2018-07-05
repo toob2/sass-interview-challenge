@@ -87,24 +87,25 @@
 					<div class="validation-msg-error err-emailAddress text-smaller text-smaller--red">Please enter a valid email address</div>
 				</div>
 
-				<div class="field-group ">
+				<div class="field-group u-margin-bottom-medium">
 					<div class="field-group-label left-side">
 						<label class="form__text">T&amp;Cs<sup>&ast;</sup></label>
 					</div>
 
-					<div class="right-side u-margin-bottom-medium no-border">
-						<div class="field-wrapper checkbox-wrapper">
-							<div class="checkbox-inner-wrapper">
-								<input id="termsAndConditions" name="termsAndConditions" type="checkbox" value="" autocomplete="off" />
-								<div class="styled-checkbox"></div>
-							</div>
-							<label class="text-smaller inline-only" for="termsAndConditions">I agree to the <strong><a href="#">Terms and Conditions</a></strong> and <strong><a href="#">Privacy Policy</a></strong></label>
-						</div>
+					<div class="right-side no-border" id="checkbox-wrapper">
+                  <input id="termsAndConditions" name="termsAndConditions" type="checkbox" value="" autocomplete="off" />
+
+                  
+                  <div class="styled-checkbox">
+                     <label for="styled-checkbox" id="checkbox-label"></label>
+                  </div>
+
+                  <label class="text-smaller inline-only" for="termsAndConditions">I agree to the <strong><a href="#">Terms and Conditions</a></strong> and <strong><a href="#">Privacy Policy</a></strong></label>
 					</div>
 					<div class="validation-msg-error err-termsAndConditions text-smaller text-smaller--red">You must agree to the Terms and Conditions and Privacy Policy</div>
 				</div>
 
-				<div class="field-wrapper">
+				<div class="field-wrapper u-margin-bottom-medium">
 					<div class="select-wrapper">
 						<label class="left-side form__text" for="title">Title</label>
 						<div class="select-inner-wrapper right-side no-border">
@@ -125,25 +126,25 @@
 					<div class="validation-msg-error err-title text-smaller">Please select a title</div>
 				</div>
 
-				<div class="field-wrapper">
+				<div class="field-wrapper u-margin-bottom-medium">
 					<label class="left-side form__text" for="firstName">First Name</label>
 					<input class="right-side" id="firstName" name="firstName" type="text" value="" autocomplete="given-name" />
-					<div class="validation-msg-error err-telephone text-smaller">Please provide a first name</div>
+					<div class="validation-msg-error err-telephone text-smaller text-smaller--red">Please provide a first name</div>
 				</div>
 
-				<div class="field-wrapper">
+				<div class="field-wrapper u-margin-bottom-medium">
 					<label class="left-side form__text" for="lastName">Last Name</label>
 					<input class="right-side" id="lastName" name="lastName" type="text" value="" autocomplete="family-name" />
 					<div class="validation-msg-error err-lastName text-smaller text-smaller--red">Please provide a last name</div>
 				</div>
 
-				<div class="field-wrapper">
+				<div class="field-wrapper u-margin-bottom-medium">
 					<label class="left-side form__text" for="busPhone">Phone number</label>
 					<input class="right-side" id="busPhone" name="busPhone" type="number" value="" autocomplete="tel-national" />
 					<div class="validation-msg-error err-busPhone text-smaller text-smaller--red">Please provide a phone number</div>
 				</div>
 
-				<div class="field-group">
+				<div class="field-group u-margin-bottom-medium">
 					<div class="field-group-label left-side">
 						<label class="form__text">Preferred contact method</label>
 					</div>
@@ -185,19 +186,19 @@
 					<div class="validation-msg-error err-postSubscribe err-telephoneSubscribe err-smsSubscribe err-emailSubscribe text-smaller text-smaller--red">Please select a preferred contact method</div>
 				</div>
 
-				<div class="field-wrapper submit-wrapper">
+				<div class="field-wrapper submit-wrapper u-margin-bottom-medium">
 					<input type="submit" value="Submit" class="submit-button" />
 				</div>
 			</form>
 			<!-- Eloqua form END -->
 
-			<p class="text-smaller warn"><strong><sup>&ast;</sup> Fields marked with an asterisk must be completed.</strong></p>
-			<p class="text-smaller"><strong>We take your privacy seriously</strong></p>
-			<p class="text-smaller">We only use your personal information to administer your account and to provide information about the products and services you have requested.</p>
-			<p class="text-smaller">We will contact you via telephone and email in relation to this enquiry. In addition, we will send you special offers, news and product information from us, our brands, and other partners from time to time by email, SMS and telephone call.</p>
-			<p class="text-smaller">We never share your details with other third parties and you can opt-out at any time.</p>
-			<p class="text-smaller">You can manage your preferences <strong><a href="#">here</a></strong> or unsubscribe at any time by clicking the link at the bottom of our promotional emails.</p>
-			<p class="text-smaller">This request is made by us, and we're based in Europe.<br/> View our full privacy policy <strong><a href="#">here</a></strong>.</p>
+			<p class="text-smaller warn u-margin-bottom-small"><strong><sup>&ast;</sup> Fields marked with an asterisk must be completed.</strong></p>
+			<p class="text-smaller u-margin-bottom-small"><strong>We take your privacy seriously</strong></p>
+			<p class="text-smaller u-margin-bottom-small">We only use your personal information to administer your account and to provide information about the products and services you have requested.</p>
+			<p class="text-smaller u-margin-bottom-small">We will contact you via telephone and email in relation to this enquiry. In addition, we will send you special offers, news and product information from us, our brands, and other partners from time to time by email, SMS and telephone call.</p>
+			<p class="text-smaller u-margin-bottom-small">We never share your details with other third parties and you can opt-out at any time.</p>
+			<p class="text-smaller u-margin-bottom-small">You can manage your preferences <strong><a href="#">here</a></strong> or unsubscribe at any time by clicking the link at the bottom of our promotional emails.</p>
+			<p class="text-smaller u-margin-bottom-small">This request is made by us, and we're based in Europe.<br/> View our full privacy policy <strong><a href="#">here</a></strong>.</p>
 		</div>
 	</section>
 
