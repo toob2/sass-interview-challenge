@@ -61,10 +61,10 @@ textarea {
 }
 
 .right-side {
+   padding: 0.35rem;
    font-size: 1rem;
    line-height: 1.3rem;
    font-weight: bold;
-   padding: 0.35rem;
    border: 0.05rem solid $colBaseText;
       &:focus {
          background-color: $colPh;
@@ -77,16 +77,13 @@ textarea {
    font-weight: bold;
       &--red {
          color: $warnColor;
-      }
+   }
 }
 
 a {
    text-decoration: none;
    color: $colBaseText;
 }
-
-
-
 
 
 

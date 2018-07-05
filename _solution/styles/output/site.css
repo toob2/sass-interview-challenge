@@ -2039,10 +2039,10 @@ textarea:-moz-placeholder {
 }
 
 .right-side {
+  padding: 0.35rem;
   font-size: 1rem;
   line-height: 1.3rem;
   font-weight: bold;
-  padding: 0.35rem;
   border: 0.05rem solid #231f20;
 }
 
@@ -2084,7 +2084,7 @@ a {
 }
 
 .hr--thick {
-  height: 0.25rem;
+  height: 0.35rem;
   align-self: center;
 }
 
@@ -2103,7 +2103,7 @@ a {
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .u-margin-bottom-medium {
@@ -2115,7 +2115,7 @@ a {
 }
 
 .u-margin-bottom-xs {
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
 }
 
 .no-border {
@@ -2126,9 +2126,18 @@ a {
   max-width: 100%;
 }
 
+#checkbox-wrapper {
+  padding-left: 0;
+  display: flex;
+  align-items: baseline;
+}
+
 input[type=checkbox] {
   visibility: hidden;
   position: relative;
+  height: 1rem;
+  width: 1rem;
+  margin: 0;
 }
 
 input[type=checkbox]::before {
@@ -2139,7 +2148,8 @@ input[type=checkbox]::before {
   left: 0;
   width: 1rem;
   height: 1rem;
-  border: 1px solid black;
+  border: 0.08rem solid #231f20;
+  border-radius: 0.1rem;
   background-color: white;
 }
 
@@ -2147,13 +2157,59 @@ input[type=checkbox]:checked:after {
   visibility: visible;
   content: '';
   position: absolute;
-  top: 60%;
-  left: 70%;
-  width: 0.6rem;
+  top: 50%;
+  left: 50%;
+  width: 0.55rem;
   height: 0.35rem;
-  border: 0.12rem solid black;
+  border: 0.12rem solid #231f20;
   border-right: none;
   border-top: none;
   background-color: white;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#checkbox-label {
+  margin-left: 0.5rem;
+}
+
+#checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.select-inner-wrapper {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.select {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: bold;
+  border: 0.05rem solid #231f20;
+  padding: 0.35rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url(../../images/dropdown-icon.png);
+  background-repeat: no-repeat;
+  background-size: 1.15rem;
+  background-position: 98% 50%;
+}
+
+.select:focus {
+  background-color: #F7FEB5;
+  color: #231f20;
+}
+
+.submit-button {
+  padding: 1.25rem 2rem;
+  background-color: #396fb0;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  border: none;
 }

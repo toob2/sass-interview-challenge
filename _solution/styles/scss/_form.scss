@@ -1,0 +1,93 @@
+#checkbox-wrapper {
+   padding-left: 0;
+   display: flex;
+   align-items: baseline;
+}
+
+input[type=checkbox] {
+   visibility: hidden;
+   position: relative;
+   height: 1rem;
+   width: 1rem;
+   margin: 0;
+      &::before {
+         visibility: visible;
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0; 
+         width: 1rem;
+         height: 1rem;
+         border: 0.08rem solid $colBaseText;
+         border-radius: 0.1rem;
+         background-color: white;
+      }
+      &:checked:after {
+         visibility: visible;
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%; 
+         width: 0.55rem;
+         height: 0.35rem;
+         border: 0.12rem solid $colBaseText;
+         border-right: none;
+         border-top: none;
+         background-color: white;
+         transform: translate(-50%, -50%) rotate(-45deg);
+      }
+}
+
+#checkbox-label {
+   margin-left: 0.5rem;
+}
+
+#checkbox-wrapper {
+   display: flex;
+   align-items: center;
+}
+
+.select-inner-wrapper {
+   width: 100%;
+   padding: 0;
+   position: relative;
+}
+
+.select {
+   width: 100%;
+   font-size: 1rem;
+   line-height: 1.3rem;
+   font-weight: bold;
+   border: 0.05rem solid $colBaseText;
+   padding: 0.35rem;   
+   appearance: none;
+   -webkit-appearance: none;
+   background-image: url(../../images/dropdown-icon.png);
+   background-repeat: no-repeat;
+   background-size: 1.15rem;
+   background-position: 98% 50%;
+      &:focus {
+         background-color: $colPh;
+         color: $colBaseText;
+      }
+}
+
+.submit-button {
+   padding: 1.25rem 2rem;
+   background-color: $accentColor;
+   color: #fff;
+   font-size: 1.2rem;
+   text-transform: uppercase;
+   font-weight: bold;
+   letter-spacing: 0.1rem;
+   border: none;
+}
+
+
+
+
+
+
+
+
+
