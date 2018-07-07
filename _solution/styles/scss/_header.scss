@@ -1,5 +1,6 @@
 .logo-wrapper {
-   padding-top: 1rem;
+   padding-top: 3rem;
+   padding-bottom: 1rem;
    display: flex;
    justify-content: center;
       @include media ($widthMobileMedium){
@@ -8,5 +9,5 @@
 }
 
 .logo-img {
-   height: 6rem;
+   height: 7rem;
 }

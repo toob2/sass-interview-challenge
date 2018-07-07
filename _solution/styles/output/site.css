@@ -2008,15 +2008,16 @@ textarea:-moz-placeholder {
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
 }
 
 .heading-secondary {
   text-align: center;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .caption {
@@ -2027,21 +2028,22 @@ textarea:-moz-placeholder {
 }
 
 .form__text {
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: 0.85rem;
+  line-height: 1rem;
   font-weight: bold;
   padding: 0 !important;
 }
 
 .form__text--intro {
+  margin-top: 1rem;
   text-align: center;
   padding: 0 8% !important;
 }
 
 .right-side {
-  padding: 0.35rem;
-  font-size: 1rem;
-  line-height: 1.3rem;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
   font-weight: bold;
   border: 0.05rem solid #231f20;
 }
@@ -2051,7 +2053,7 @@ textarea:-moz-placeholder {
 }
 
 .text-smaller {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   line-height: 0.9rem;
   font-weight: bold;
 }
@@ -2070,7 +2072,8 @@ a:hover {
 }
 
 .logo-wrapper {
-  padding-top: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: center;
 }
@@ -2082,7 +2085,7 @@ a:hover {
 }
 
 .logo-img {
-  height: 6rem;
+  height: 7rem;
 }
 
 .hr {
@@ -2113,19 +2116,23 @@ a:hover {
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 .u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-small-2x {
   margin-bottom: 2rem;
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .u-margin-bottom-xs {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 
 .no-border {
@@ -2215,10 +2222,10 @@ input[type=checkbox]:checked:after {
 }
 
 .submit-button {
-  padding: 1.25rem 2rem;
+  padding: 1.1rem 1.8rem;
   background-color: #396fb0;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.1rem;

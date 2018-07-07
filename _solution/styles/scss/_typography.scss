@@ -31,15 +31,16 @@ textarea {
    text-align: center;
    text-transform: uppercase;
    font-weight: 300;
-   font-size: 1.7rem;
+   font-size: 1.6rem;
+   line-height: 1.8rem;
 }
 
 .heading-secondary {
    text-align: center;
    text-transform: uppercase;
    font-weight: 300;
-   font-size: 1.3rem;
-   line-height: 1.6rem;   
+   font-size: 1.2rem;
+   line-height: 1.5rem;   
 }
 
 .caption {
@@ -50,20 +51,21 @@ textarea {
 }
 
 .form__text {
-   font-size: 1rem;
-   line-height: 1.3rem;
+   font-size: 0.85rem;
+   line-height: 1rem;
    font-weight: bold;
    padding: 0!important;
       &--intro {
+         margin-top: 1rem;
          text-align: center;
          padding: 0 8%!important;
       }
 }
 
 .right-side {
-   padding: 0.35rem;
-   font-size: 1rem;
-   line-height: 1.3rem;
+   padding: 0.3rem;
+   font-size: 1.1rem;
+   line-height: 1rem;
    font-weight: bold;
    border: 0.05rem solid $colBaseText;
       &:focus {
@@ -72,7 +74,7 @@ textarea {
 }
 
 .text-smaller {
-   font-size: 0.65rem;
+   font-size: 0.6rem;
    line-height: 0.9rem;
    font-weight: bold;
       &--red {
