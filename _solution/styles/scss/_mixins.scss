@@ -1,0 +1,9 @@
+@mixin input-field-style {
+   font-size: 1.9rem;
+   line-height: 1.6rem;
+   font-weight: 900;
+   border: 0.1rem solid $colBaseText;
+   padding-top: 0.6rem;
+   padding-bottom: 0.6rem;
+   border-radius: 0.2rem;
+}

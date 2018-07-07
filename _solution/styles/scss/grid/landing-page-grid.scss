@@ -26,8 +26,8 @@ html {
 	width: 100%;
 	position: relative;
 	max-width: $maxWidth; // Padding according to needs:
-	padding-left: 0.5rem;
-	padding-right: 0.5rem; // Columns
+	padding-left: 10px;
+	padding-right: 10px; // Columns
 	%col {
 		@include span($columns);
 		position: relative;

@@ -1,10 +1,14 @@
 @import "variables";
+@import "mixins";
 
 html {
-	font-size: 18px;
+	font-size: 66%;
 	@include sans;
 	color: $colBaseText;
-	line-height: 120%;
+   line-height: 120%;
+   @include media ($widthTabletSmall){
+      padding-top: 1rem;
+   }
 }
 
 input {
@@ -30,30 +34,30 @@ textarea {
 .heading-primary {
    text-align: center;
    text-transform: uppercase;
-   font-weight: 300;
-   font-size: 1.6rem;
-   line-height: 1.8rem;
+   font-weight: 400;
+   font-size: 2.85rem;
+   line-height: 3.25rem;
 }
 
 .heading-secondary {
    text-align: center;
    text-transform: uppercase;
    font-weight: 300;
-   font-size: 1.2rem;
-   line-height: 1.5rem;   
+   font-size: 2.25rem;
+   line-height: 2.5rem;   
 }
 
 .caption {
    text-align: center;
-   font-size: 0.65rem;
-   line-height: 0.8rem;
+   font-size: 1.25rem;
+   line-height: 1.5rem;
    font-weight: bold;
 }
 
 .form__text {
-   font-size: 0.85rem;
-   line-height: 1rem;
-   font-weight: bold;
+   font-size: 1.85rem;
+   line-height: 2rem;
+   font-weight: 800;
    padding: 0!important;
       &--intro {
          margin-top: 1rem;
@@ -63,19 +67,15 @@ textarea {
 }
 
 .right-side {
-   padding: 0.3rem;
-   font-size: 1.1rem;
-   line-height: 1rem;
-   font-weight: bold;
-   border: 0.05rem solid $colBaseText;
+   @include input-field-style;
       &:focus {
          background-color: $colPh;
       }
 }
 
 .text-smaller {
-   font-size: 0.6rem;
-   line-height: 0.9rem;
+   font-size: 1.15rem;
+   line-height: 1.2rem;
    font-weight: bold;
       &--red {
          color: $warnColor;

@@ -1,29 +1,29 @@
 .hr {
    display: block;
    border: none;
-   height: 0.08rem;
+   height: 0.12rem;
    margin: 0 auto;
    background-color: $colBaseText;
       &--thick {
-         height: 0.35rem;
+         height: 0.8rem;
          align-self: center;
       }
       &--short {
          width: 50%;
          margin: 0 25%;
-         height: 0.05rem;
+         height: 0.1rem;
          background-color: $accentColor;
       }
       &--blue {
          width: 30%;
          margin: 0 35%;
-         height: 0.5rem;
+         height: 1.25rem;
          background-color: $accentColor;
       }
 }
 
 .u-margin-bottom-big {
-   margin-bottom: 6rem;
+   margin-bottom: 7rem;
  }
  
  .u-margin-bottom-medium {
@@ -31,15 +31,15 @@
  }
  
 .u-margin-bottom-small-2x {
-   margin-bottom: 2rem;
+   margin-bottom: 3rem;
 }
 
  .u-margin-bottom-small {
-   margin-bottom: 1rem;
+   margin-bottom: 1.5rem;
  }
  
  .u-margin-bottom-xs {
-   margin-bottom: 0.3rem;
+   margin-bottom: 0.65rem;
  }
 
  .no-border {
