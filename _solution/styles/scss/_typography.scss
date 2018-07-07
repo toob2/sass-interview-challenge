@@ -83,6 +83,9 @@ textarea {
 a {
    text-decoration: none;
    color: $colBaseText;
+      &:hover{
+         color:$colTextGrey1;
+      }
 }
 
 

@@ -93,8 +93,8 @@ html {
   width: 100%;
   position: relative;
   max-width: 1020px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .container:after {
@@ -2065,10 +2065,20 @@ a {
   color: #231f20;
 }
 
+a:hover {
+  color: #939696;
+}
+
 .logo-wrapper {
   padding-top: 1rem;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (min-width: 375px) {
+  .logo-wrapper {
+    padding-top: 1rem;
+  }
 }
 
 .logo-img {
@@ -2157,7 +2167,7 @@ input[type=checkbox]:checked:after {
   visibility: visible;
   content: '';
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 0.55rem;
   height: 0.35rem;
@@ -2185,6 +2195,7 @@ input[type=checkbox]:checked:after {
 
 .select {
   width: 100%;
+  text-indent: 1%;
   font-size: 1rem;
   line-height: 1.3rem;
   font-weight: bold;

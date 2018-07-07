@@ -26,7 +26,7 @@ input[type=checkbox] {
          visibility: visible;
          content: '';
          position: absolute;
-         top: 50%;
+         top: 40%;
          left: 50%; 
          width: 0.55rem;
          height: 0.35rem;
@@ -55,6 +55,7 @@ input[type=checkbox] {
 
 .select {
    width: 100%;
+   text-indent: 1%;
    font-size: 1rem;
    line-height: 1.3rem;
    font-weight: bold;

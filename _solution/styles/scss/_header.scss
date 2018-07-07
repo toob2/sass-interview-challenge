@@ -2,6 +2,9 @@
    padding-top: 1rem;
    display: flex;
    justify-content: center;
+      @include media ($widthMobileMedium){
+         padding-top: 1rem;
+      }
 }
 
 .logo-img {
