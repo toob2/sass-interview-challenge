@@ -6,4 +6,20 @@
    padding-top: 0.6rem;
    padding-bottom: 0.6rem;
    border-radius: 0.2rem;
+      @include media ($widthTabletSmall){
+      font-size: 1.5rem;
+      }
 }
+
+@mixin flex-vertically-center {
+   display: flex;
+   align-items: center;
+}
+
+@mixin clearfix {
+   &::after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+ }

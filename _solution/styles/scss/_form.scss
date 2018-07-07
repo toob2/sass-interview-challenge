@@ -1,7 +1,10 @@
-#checkbox-wrapper {
-   padding-left: 0;
-   display: flex;
-   align-items: baseline;
+.field-group {
+   @include clearfix;
+      &__wrapper {
+         @include media ($widthTabletSmall){
+            @include flex-vertically-center;
+          }  
+      }
 }
 
 input[type=checkbox] {
@@ -27,7 +30,7 @@ input[type=checkbox] {
          content: '';
          position: absolute;
          top: 45%;
-         left: 55%; 
+         left: 50%; 
          width: 0.85rem;
          height: 0.45rem;
          border: 0.25rem solid $colBaseText;
@@ -38,13 +41,19 @@ input[type=checkbox] {
       }
 }
 
-#checkbox-label {
-   margin-left: 0.5rem;
+.checkbox-wrapper {
+   @include flex-vertically-center;
+      &--multiple {
+         @include media ($widthTabletSmall){
+            display: flex;
+            justify-content: space-between;
+         }  
+      }
 }
 
-#checkbox-wrapper {
-   display: flex;
-   align-items: center;
+.checkbox-label {
+   margin-left: 1rem;
+   margin-right: 0.5rem;
 }
 
 .select-inner-wrapper {
@@ -57,10 +66,8 @@ input[type=checkbox] {
    @include input-field-style;
    width: 100%;
    text-indent: 2%;
-   font-size: 1.5rem;
-   line-height: 1.85rem;
    margin-top: 0.55rem;
-   font-weight: 900;
+   line-height: 2.5rem;
    appearance: none;
    -webkit-appearance: none;
    background-image: url(../../images/dropdown-icon.png);
@@ -73,17 +80,36 @@ input[type=checkbox] {
       }
 }
 
+#pref-contact {
+   @include media ($widthTabletSmall){
+      display: flex;
+      justify-content: space-between;
+    }  
+}
+
+
+
+.pref-contact__wrapper {
+   @include media ($widthTabletSmall){
+      display: flex!important;
+      flex-direction: row;
+      justify-content: flex-start;
+   }
+}
+
 .submit-button {
-   padding: 1.1rem 1.8rem;
+   padding: 1.65rem 2.65rem;
    background-color: $accentColor;
    color: #fff;
-   font-size: 1rem;
+   font-size: 2rem;
    text-transform: uppercase;
    font-weight: bold;
    letter-spacing: 0.1rem;
    border: none;
+   @include media ($widthTabletSmall){
+      font-size: 1.5rem;
+   }
 }
-
 
 
 

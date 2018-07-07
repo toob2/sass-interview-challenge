@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="container products">
-			<div class="col-12 col-ml-4">
+			<div class="col-12 col-ts-4">
 				<div class="message-wrapper">
 					<div class="message">
 						<img src="../images/rectangle-2.jpg" class="message-img u-margin-bottom-xs" />
@@ -53,7 +53,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-ml-4">
+			<div class="col-12 col-ts-4">
 				<div class="message-wrapper">
 					<div class="message">
 						<img src="../images/rectangle-212.jpg" class="message-img u-margin-bottom-xs" />
@@ -61,7 +61,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-ml-4">
+			<div class="col-12 col-ts-4">
 				<div class="message-wrapper">
 					<div class="message">
 						<img src="../images/rectangle-24.jpg" class="message-img u-margin-bottom-xs" />
@@ -73,42 +73,40 @@
    </section>
 
 	<section class="container form-wrapper">
-      <hr class="hr u-margin-bottom-small-2x">
 		<div class="col-12 col-ts-10 push-ts-1 col-ds-8 push-ds-2 alpha omega inner-form-wrapper">
+         <hr class="hr u-margin-bottom-small-2x">
 			<!-- Eloqua Form START -->
 			<p class="form-intro-copy form__text form__text--intro u-margin-bottom-small-2x">This is some text that introduces why you should fill in this form, we promise great things in return!</p>
 
 			<form method="" name="test-form-name" action="" class="elq-form">
-				<input name="Timestamp" type="hidden" value="" />
-
-				<div class="field-wrapper u-margin-bottom-small-2x">
-					<label class="left-side form__text col-12 u-margin-bottom-xs">Email Address<sup>&ast;</sup></label>
-					<input class="right-side u-margin-bottom-xs col-12" name="emailAddress" type="text" value="" placeholder="Email address" autocomplete="email" />
-					<div class="validation-msg-error err-emailAddress text-smaller text-smaller--red">Please enter a valid email address</div>
-				</div>
-
-				<div class="field-group u-margin-bottom-medium">
-					<div class="field-group-label left-side u-margin-bottom-xs">
-						<label class="form__text">T&amp;Cs<sup>&ast;</sup></label>
-					</div>
-
-					<div class="right-side no-border u-margin-bottom-xs" id="checkbox-wrapper">
-                  <input id="termsAndConditions" name="termsAndConditions" type="checkbox" value="" autocomplete="off" />
-
+            <input name="Timestamp" type="hidden" value="" />
+            
+            <div class="field-group u-margin-bottom-small-2x">
+               <div class="field-group__wrapper">
+                  <label class="left-side form__text col-12 col-ts-3 u-margin-bottom-xs alpha">Email Address<sup>&ast;</sup></label>
                   
-                  <div class="styled-checkbox">
-                     <label for="styled-checkbox" id="checkbox-label"></label>
-                  </div>
+                  <input class="right-side u-margin-bottom-xs col-12 push-ts-1 col-ts-8" name="emailAddress" type="text" value="" placeholder="Email address" autocomplete="email" />
+               </div>
+               <div class="validation-msg-error err-emailAddress text-smaller text-smaller--red push-ts-4 col-ts-7 alpha">Please enter a valid email address</div>
+            </div>
+            
+				<div class="field-group u-margin-bottom-small-2x">
+               <div class="field-group__wrapper">
+                  <label class="form__text left-side form__text col-12 col-ts-3 u-margin-bottom-xs alpha">T&amp;  Cs<sup>&ast;</sup>
+                  </label>
+                  <div class="right-side no-border u-margin-bottom-xs checkbox-wrapper push-ts-1 col-ts-8 alpha">
+                     <input id="termsAndConditions" name="termsAndConditions" type="checkbox" value="" autocomplete="off"/>
 
-                  <label class="text-smaller inline-only" for="termsAndConditions" id="checkbox-label">I agree to the <strong><a href="#">Terms and Conditions</a></strong> and <strong><a href="#">Privacy Policy</a></strong></label>
-					</div>
-					<div class="validation-msg-error err-termsAndConditions text-smaller text-smaller--red">You must agree to the Terms and Conditions and Privacy Policy</div>
+                     <label class="checkbox-label text-smaller inline-only" for="termsAndConditions">I agree to the <strong><a href="#">Terms and Conditions</a></strong> and <strong><a href="#">Privacy Policy</a></strong></label>
+                  </div>
+               </div>
+					<div class="validation-msg-error err-termsAndConditions text-smaller text-smaller--red push-ts-4 col-ts-8 alpha">You must agree to the Terms and Conditions and Privacy Policy</div>
 				</div>
 
-				<div class="field-wrapper u-margin-bottom-medium">
-					<div class="select-wrapper">
-						<label class="left-side form__text u-margin-bottom-xs" for="title">Title</label>
-						<div class="select-inner-wrapper right-side no-border">
+				<div class="field-group u-margin-bottom-small-2x">
+               <div class="field-group__wrapper">
+                  <label class="left-side form__text col-12 col-ts-3 u-margin-bottom-xs alpha">Title</label>
+						<div class="select-inner-wrapper right-side no-border push-ts-1 col-ts-8 alpha omega">
 							<select class="select titles-list u-margin-bottom-xs" id="title" name="title" type="text" autocomplete="off">
 								<option class="option" value="">Please choose</option>
 								<option value="Mr.">Mr.</option>
@@ -123,76 +121,94 @@
                      </select>
 						</div>
 					</div>
-					<div class="validation-msg-error err-title text-smaller text-smaller--red">Please select a title</div>
-				</div>
-
-				<div class="field-wrapper u-margin-bottom-medium">
-					<label class="left-side form__text col-12 u-margin-bottom-xs" for="firstName">First Name</label>
-					<input class="right-side col-12 u-margin-bottom-xs" id="firstName" name="firstName" type="text" value="" autocomplete="given-name" />
-					<div class="validation-msg-error err-telephone text-smaller text-smaller--red">Please provide a first name</div>
-				</div>
-
-				<div class="field-wrapper u-margin-bottom-medium">
-					<label class="left-side form__text col-12 u-margin-bottom-xs" for="lastName">Last Name</label>
-					<input class="right-side col-12 u-margin-bottom-xs" id="lastName" name="lastName" type="text" value="" autocomplete="family-name" />
-					<div class="validation-msg-error err-lastName text-smaller text-smaller--red">Please provide a last name</div>
-				</div>
-
-				<div class="field-wrapper u-margin-bottom-medium">
-					<label class="left-side form__text col-12 u-margin-bottom-xs" for="busPhone">Phone number</label>
-					<input class="right-side col-12 u-margin-bottom-xs" id="busPhone" name="busPhone" type="number" value="" autocomplete="tel-national" />
-					<div class="validation-msg-error err-busPhone text-smaller text-smaller--red">Please provide a phone number</div>
+					<div class="validation-msg-error err-title text-smaller text-smaller--red push-ts-4 col-ts-8 alpha">Please select a title</div>
 				</div>
 
 				<div class="field-group u-margin-bottom-small-2x">
-					<div class="field-group-label left-side u-margin-bottom-small">
-						<label class="form__text">Preferred contact method</label>
-					</div>
+                  <div class="field-group__wrapper">
+                     <label class="left-side form__text col-12 col-ts-3 u-margin-bottom-xs alpha">First Name</label>
+                     <input class="right-side u-margin-bottom-xs col-12 push-ts-1 col-ts-8" id="firstName" name="firstName" type="text" value="" autocomplete="given-name" />
+                  </div>
+                     <div class="validation-msg-error err-firstName text-smaller text-smaller--red push-ts-4 col-ts-8 alpha">Please provide a first name
+                  </div>
+            </div>
 
-					<div class="right-side no-border">
-						<div class="field-wrapper checkbox-wrapper u-margin-bottom-small">
-							<label for="emailSubscribe" class="form__text col-4">Email</label>
-								<input id="emailSubscribe" name="emailSubscribe" type="checkbox" value="" autocomplete="off" />
-								<div class="styled-checkbox"></div>
+            <div class="field-group u-margin-bottom-small-2x">
+               <div class="field-group__wrapper">
+                  <label class="left-side form__text col-12 col-ts-3 u-margin-bottom-xs alpha">Last Name</label>
+                  <input class="right-side u-margin-bottom-xs col-12 push-ts-1 col-ts-8" id="lastName" name="lastName" type="text" value="" autocomplete="given-name" />
+               </div>
+                  <div class="validation-msg-error err-lastName text-smaller text-smaller--red push-ts-4 col-ts-7 alpha">Please provide a last name
+               </div>
+            </div>
+
+            <div class="field-group u-margin-bottom-small-2x">
+               <div class="field-group__wrapper">
+                  <label class="left-side form__text col-12 col-ts-3 u-margin-bottom-xs alpha">Phone Number</label>
+                  <input class="right-side u-margin-bottom-xs col-12 push-ts-1 col-ts-8" id="busPhone" name="busPhone" type="number" value="" autocomplete="tel-national"/>
+               </div>
+                  <div class="validation-msg-error err-busPhone text-smaller text-smaller--red push-ts-4 col-ts-7 alpha">Please provide a phone number
+               </div>
+            </div>
+
+				<div class="field-group u-margin-bottom-small-2x">
+               <div class="field-group__wrapper">
+					   <label class="form__text col-ts-3 u-margin-bottom-xs alpha">Preferred contact method
+                  </label>
+		
+					<div class="right-side no-border push-ts-1 col-ts-8 alpha omega" id="pref-contact">
+
+						<div class="field-wrapper checkbox-wrapper checkbox-wrapper--multiple u-margin-bottom-small">
+							<label for="emailSubscribe" class="checkbox-label form__text col-ms-8 col-mm-6 col-ml-5 alpha">Email</label>
+                     <input id="emailSubscribe" name="emailSubscribe" type="checkbox" value="" autocomplete="off"/>
 						</div>
 
-						<div class="field-wrapper checkbox-wrapper u-margin-bottom-small">
-							<label for="smsSubscribe" class="form__text col-4">SMS</label>
-								<input id="smsSubscribe" name="smsSubscribe" type="checkbox" value="" autocomplete="off" />
-								<div class="styled-checkbox"></div>
+						<div class="field-wrapper checkbox-wrapper checkbox-wrapper--multiple u-margin-bottom-small">
+							<label for="smsSubscribe" class="checkbox-label form__text col-ms-8 col-mm-6 col-ml-5 alpha">SMS</label>
+                     <input id="smsSubscribe" name="smsSubscribe" type="checkbox" value="" autocomplete="off"/>
 						</div>
 
-						<div class="field-wrapper checkbox-wrapper u-margin-bottom-small">
-							<label for="telephoneSubscribe" class="form__text col-4">Telephone</label>
-								<input id="telephoneSubscribe" name="telephoneSubscribe" type="checkbox" value="" autocomplete="off" />
-								<div class="styled-checkbox"></div>
+						<div class="field-wrapper checkbox-wrapper checkbox-wrapper--multiple u-margin-bottom-small">
+							<label for="telephoneSubscribe" class="checkbox-label form__text col-ms-8 col-mm-6 col-ml-5 alpha">Telephone</label>
+                     <input id="telephoneSubscribe" name="telephoneSubscribe" type="checkbox" value="" autocomplete="off"/>
 						</div>
 
-						<div class="field-wrapper checkbox-wrapper u-margin-bottom-small">
-							<label for="postSubscribe" class="form__text col-4">Post</label>
-								<input id="postSubscribe" name="postSubscribe" type="checkbox" value="" autocomplete="off" />
-								<div class="styled-checkbox"></div>	
-						</div>
-					</div>
+						<div class="field-wrapper checkbox-wrapper checkbox-wrapper--multiple u-margin-bottom-small">
+							<label for="postSubscribe" class="checkbox-label form__text col-ms-8 col-mm-6 col-ml-5 alpha">Post</label>
+                     <input id="postSubscribe" name="postSubscribe" type="checkbox" value="" autocomplete="off"/>	
+                  </div>
+                  
+               </div>
+            </div>
 
-					<div class="validation-msg-error err-postSubscribe err-telephoneSubscribe err-smsSubscribe err-emailSubscribe text-smaller text-smaller--red"> * Please select a preferred contact method</div>
-				</div>
+					<div class="validation-msg-error err-postSubscribe err-telephoneSubscribe     err-smsSubscribe err-emailSubscribe text-smaller text-smaller--red"> * Please select a    preferred contact method
+               </div>
+   
+            
+            </div>
 
 				<div class="field-wrapper submit-wrapper u-margin-bottom-medium">
 					<input type="submit" value="Submit" class="submit-button" />
-				</div>
-			</form>
-			<!-- Eloqua form END -->
-
-			<p class="text-smaller text-smaller--red u-margin-bottom-small"><strong><sup>&ast;</sup> Fields marked with an asterisk must be completed.</strong></p>
-			<p class="text-smaller u-margin-bottom-small"><strong>We take your privacy seriously</strong></p>
-			<p class="text-smaller u-margin-bottom-small">We only use your personal information to administer your account and to provide information about the products and services you have requested.</p>
-			<p class="text-smaller u-margin-bottom-small">We will contact you via telephone and email in relation to this enquiry. In addition, we will send you special offers, news and product information from us, our brands, and other partners from time to time by email, SMS and telephone call.</p>
-			<p class="text-smaller u-margin-bottom-small">We never share your details with other third parties and you can opt-out at any time.</p>
-			<p class="text-smaller u-margin-bottom-small">You can manage your preferences <strong><a href="#">here</a></strong> or unsubscribe at any time by clicking the link at the bottom of our promotional emails.</p>
-			<p class="text-smaller u-margin-bottom-medium">This request is made by us, and we're based in Europe.<br/> View our full privacy policy <strong><a href="#">here</a></strong>.</p>
-		</div>
-	</section>
+            </div>
+         </div>
+      </form>
+      </section>
+         
+		<!-- Eloqua form END -->
+         
+      <section class="container">
+         <div class="col-12 col-ts-10 push-ts-1 col-ds-8 push-ds-2 alpha omega">
+            <p class="text-smaller text-smaller--red u-margin-bottom-small-2x"><strong><sup>&ast;</sup> Fields marked with an asterisk must be completed.</strong></p>
+            <p class="text-smaller u-margin-bottom-small"><strong>We take your privacy seriously</strong></p>
+            <p class="text-smaller u-margin-bottom-small">We only use your personal information to administer your account and to provide information about the products and services you have requested.</p>
+            <p class="text-smaller u-margin-bottom-small">We will contact you via telephone and email in relation to this enquiry. In addition, we will send you special offers, news and product information from us, our brands, and other partners from time to time by email, SMS and telephone call.</p>
+            <p class="text-smaller u-margin-bottom-small">We never share your details with other third parties and you can opt-out at any time.</p>
+            <p class="text-smaller u-margin-bottom-small">You can manage your preferences <strong><a href="#">here</a></strong> or unsubscribe at any time by clicking the link at the bottom of our promotional emails.</p>
+            <p class="text-smaller u-margin-bottom-medium">This request is made by us, and we're based in Europe.<br/> View our full privacy policy <strong><a href="#">here</a></strong>.</p>
+         </div>
+      </section>
+      
+	
 
 	<footer> 
 		<div class="container">

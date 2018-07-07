@@ -9,16 +9,23 @@
          align-self: center;
       }
       &--short {
-         width: 50%;
-         margin: 0 25%;
+         width: 32%;
+         margin: 0 34%;
          height: 0.1rem;
          background-color: $accentColor;
+            @include media ($widthTabletSmall){
+               
+            }
       }
       &--blue {
          width: 30%;
          margin: 0 35%;
          height: 1.25rem;
          background-color: $accentColor;
+         @include media ($widthTabletSmall){
+            width: 20%;
+            margin: 0 40%;      
+         }
       }
 }
 

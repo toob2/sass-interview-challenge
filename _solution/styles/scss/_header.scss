@@ -3,11 +3,14 @@
    padding-bottom: 0.5rem;
    display: flex;
    justify-content: center;
-      @include media ($widthMobileMedium){
-         padding-top: 1rem;
+      @include media ($widthMobileLarge){
+         padding-top: 4rem;
       }
 }
 
 .logo-img {
    height: 12rem;
+      // @include media ($widthTabletSmall){
+      // height: 15rem;
+      // }
 }
