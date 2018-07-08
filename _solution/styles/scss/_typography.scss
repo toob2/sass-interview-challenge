@@ -57,14 +57,14 @@ textarea {
 .form__text {
    font-size: 1.85rem;
    line-height: 2rem;
-   font-weight: 800;
+   font-weight: 700;
       &--intro {
          margin-top: 1rem;
          text-align: center;
          padding: 0 8%!important;
       }
       @include media ($widthTabletSmall){
-         font-size: 1.4rem;
+         font-size: 1.6rem;
       }
 
 }

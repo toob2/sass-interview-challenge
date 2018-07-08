@@ -2036,7 +2036,7 @@ textarea:-moz-placeholder {
 .form__text {
   font-size: 1.85rem;
   line-height: 2rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .form__text--intro {
@@ -2047,7 +2047,7 @@ textarea:-moz-placeholder {
 
 @media only screen and (min-width: 768px) {
   .form__text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -2180,7 +2180,10 @@ a {
 }
 
 input[type=checkbox] {
+  appearance: none;
   visibility: hidden;
+  -moz-appearance: checkbox;
+  -webkit-appearance: checkbox !important;
   position: relative;
   height: 1.5rem;
   width: 1.5rem;
@@ -2189,6 +2192,7 @@ input[type=checkbox] {
 
 input[type=checkbox]::before {
   visibility: visible;
+  -webkit-appearance: none !important;
   content: '';
   position: absolute;
   top: 0;
@@ -2202,6 +2206,7 @@ input[type=checkbox]::before {
 
 input[type=checkbox]:checked:after {
   visibility: visible;
+  -webkit-appearance: none !important;
   content: '';
   position: absolute;
   top: 45%;
@@ -2247,14 +2252,15 @@ input[type=checkbox]:checked:after {
   padding-bottom: 0.6rem;
   border-radius: 0.2rem;
   width: 100%;
-  text-indent: 2%;
+  text-indent: 2.25%;
   margin-top: 0.55rem;
-  line-height: 2.5rem;
+  line-height: 2.25rem;
   appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   background-image: url(../../images/dropdown-icon.png);
   background-repeat: no-repeat;
-  background-size: 1.15rem;
+  background-size: 1.75rem;
   background-position: 98% 50%;
 }
 
@@ -2267,6 +2273,12 @@ input[type=checkbox]:checked:after {
 .select:focus {
   background-color: #F7FEB5;
   color: #231f20;
+}
+
+@-moz-document url-prefix() {
+  .select {
+    text-indent: 1%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -2284,7 +2296,8 @@ input[type=checkbox]:checked:after {
   }
 }
 
-.submit-button {
+input[type=submit] {
+  -webkit-appearance: none;
   padding: 1.65rem 2.65rem;
   background-color: #396fb0;
   color: #fff;
@@ -2296,7 +2309,7 @@ input[type=checkbox]:checked:after {
 }
 
 @media only screen and (min-width: 768px) {
-  .submit-button {
+  input[type=submit] {
     font-size: 1.5rem;
   }
 }
