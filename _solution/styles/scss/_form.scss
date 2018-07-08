@@ -51,7 +51,7 @@ input[type=checkbox] {
       &--multiple {
          @include media ($widthTabletSmall){
             display: flex;
-            justify-content: space-between;
+           justify-content: space-between;
          }  
       }
 }
