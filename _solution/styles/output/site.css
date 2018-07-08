@@ -2182,9 +2182,7 @@ a:active {
 
 input[type=checkbox] {
   appearance: none;
-  visibility: hidden;
   -moz-appearance: checkbox;
-  -webkit-appearance: checkbox !important;
   position: relative;
   height: 1.5rem;
   width: 1.5rem;
@@ -2192,8 +2190,6 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]::before {
-  visibility: visible;
-  -webkit-appearance: none !important;
   content: '';
   position: absolute;
   top: 0;
@@ -2206,8 +2202,6 @@ input[type=checkbox]::before {
 }
 
 input[type=checkbox]:checked:after {
-  visibility: visible;
-  -webkit-appearance: none !important;
   content: '';
   position: absolute;
   top: 45%;
